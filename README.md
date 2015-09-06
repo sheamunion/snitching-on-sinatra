@@ -146,7 +146,7 @@ end
 ```
 
 Then point your browser to
-<a href="http://localhost:9393/greetings/eve" target="_blank">http://localhost:9393/greetings/eve</a>.
+<a href="http://localhost:4567/greetings/eve" target="_blank">http://localhost:4567/greetings/eve</a>.
 The browser will respond with the parameter sent in. Try changing "eve" to
 something else, like "saskatchewan". Sinatra will still match this route and
 will display whatever text is entered after the last slash.
@@ -220,7 +220,7 @@ get '/cities/:city/greetings/:name' do
 end
 ```
 
-then load it in the browser by visiting <a href="http://localhost:9393/cities/berkeley/greetings/eve" target="_blank">http://localhost:9393/cities/berkeley/greetings/eve</a>
+then load it in the browser by visiting <a href="http://localhost:4567/cities/berkeley/greetings/eve" target="_blank">http://localhost:4567/cities/berkeley/greetings/eve</a>
 
 ![snitch3](snitch3.png)
 
