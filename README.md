@@ -8,8 +8,14 @@ purpose) for creating web applications quickly.
 If you haven't already, install the sinatra gem:
 
 ```bash
-$ gem install sinatra
+$ gem install sinatra -v '~> 1.4.6'
 ```
+
+*Note: What's with that `~>` syntax? We're telling `gem` to install sinatra 
+version greater than or equal to `1.4.6`, but limiting which versions it will 
+install to patch releases greater than `1.4.6`. So `1.4.7` might be installed 
+in the future, but `1.4.5` won't be. Why `1.4.6`? Sinatra 1.4.5 had a bug that 
+prevented sinatra from displaying errors to the browser.*
 
 Create a new ruby file (let's call it `sinatra.rb`, but it could really be
 called anything):
