@@ -146,7 +146,7 @@ end
 ```
 
 Then point your browser to
-<a href="http://localhost:9393/greetings/eve" target="_blank">http://localhost:9393/greetings/eve</a>.
+<a href="http://localhost:4567/greetings/eve" target="_blank">http://localhost:4567/greetings/eve</a>.
 The browser will respond with the parameter sent in. Try changing "eve" to
 something else, like "saskatchewan". Sinatra will still match this route and
 will display whatever text is entered after the last slash.
@@ -220,7 +220,7 @@ get '/cities/:city/greetings/:name' do
 end
 ```
 
-then load it in the browser by visiting <a href="http://localhost:9393/cities/berkeley/greetings/eve" target="_blank">http://localhost:9393/cities/berkeley/greetings/eve</a>
+then load it in the browser by visiting <a href="http://localhost:4567/cities/berkeley/greetings/eve" target="_blank">http://localhost:4567/cities/berkeley/greetings/eve</a>
 
 ![snitch3](snitch3.png)
 
@@ -385,13 +385,9 @@ available:
 </form>
 ```
 
-You may have noticed that the `if @greeting` is preceded by `<%` instead of
-`<%=`. You can use `<%` to stop ERB from displaying the content of the tag to
-the browser. `<%=` displays the contents of the tag to the browser. Feel free to
-experiment with using `<%` and `<%=`; most things that you're less interested in
-seeing the output of &mdash; an `each` loop, `if`, blocks, etc. &mdash; will often use
-`<%` instead of `<%=` because we're less interested in showing the output of
-those things to the user.
+You may have noticed that the line `if @greeting` is preceded by `<%` instead of
+`<%=` (without the "equals" sign). `<%=` evaluates Ruby code *and passes the value* of the expression through to the browser.  `<%` evaluates Ruby code in the same way but *suppresses the value* of the expression from the browser. Feel free to
+experiment with using `<%` and `<%=`.
 
 Now when we submit the form, we get a nice custom greeting:
 
