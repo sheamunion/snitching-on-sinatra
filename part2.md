@@ -131,9 +131,10 @@ has been raised, now is a good time to practice debugging.
 
 ## Watch it fail
 A good, <a href="https://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank">RESTful</a>
-route implies what you should be receiving when you make a request, and the only
-route we've implemented so far is `/todos`, which tells us that this would render
-a list of Todo items. So let's access the model in the controller:
+route should imply what the client should receive when a request is made. In our
+case, the client is a web browser, and the only route we've implemented so far
+is `/todos`. When we make a request to `/todos`, some Todos should appear. So 
+let's do that by accessing the `Todo` model in the controller:
 
 ```ruby
 get '/todos' do
