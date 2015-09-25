@@ -300,11 +300,18 @@ We need to tell ActiveRecord to run this migration and create the table.
 
 ## Using the Rakefile
 This tutorial provides a `Rakefile` for you to use. It should be in the same
-directory as this README, and it contains a few useful [rake tasks](https://github.com/ruby/rake). 
-I recommend reading through the `Rakefile` to familiarize yourself with what has 
-been defined and what each task might do. 
+directory as this document and it contains a few useful [rake](https://github.com/ruby/rake) 
+tasks. I recommend [reading through](Rakefile) the `Rakefile` to familiarize yourself with 
+what has been defined and what each task might do. 
 
-Keep in mind you can run `rake -T` to list the tasks you can use.
+Copy the `Rakefile` into your `todoolittle` directory and run `rake -T` to list
+the tasks you can use. You should see this:
+
+```bash
+rake db:create   # Create the database todolittle
+rake db:drop     # Drop the database todolittle
+rake db:migrate  # Migrate the database (options: VERSION=x, VERBOSE=false, SCOPE=blog)
+```
 
 ## Creating the database
 Create the database with
