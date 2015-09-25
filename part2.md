@@ -175,7 +175,7 @@ the todo items we selected in the controller and display them:
 <a href="http://localhost:4567/todos" target="_blank">http://localhost:4567/todos</a>,
 an error should show up: 
 
-IMAGE 2-2
+![snitch2-2](snitch2-2.png)
 
 This goes back to what we alluded to before. We don't even *have* a database. 
 We haven't told ActiveRecord how to connect to a database. We haven't created
@@ -244,7 +244,7 @@ between Active Record and the database that stores our Todo data.
 Whew. Now let's refresh that page again and see what happens. *Hopefully* we'll
 see an error message that will tell us what we need to do next.
 
-IMAGE 2-3
+![snitch2-3](snitch2-3.png)
 
 Well, that's definitely better than the previous error.  `SQLite3::SQLException: no such table: todos`
 tells us exactly what the problem is: The `todos` table doesn't exist.
@@ -332,7 +332,7 @@ Refresh your browser pointing to
 <a href="http://localhost:4567/todos" target="_blank">http://localhost:4567/todos</a>
 and you should see something similar to this:
 
-IMAGE 2-4
+![snitch2-4](snitch2-4.png)
 
 Ok, so we see the headline, but what about our todos? 
 
@@ -354,7 +354,7 @@ This should give you an `irb` command prompt that you can use to create a few
 Todo items. After creating a few, reload your browser and you should start
 seeing items show up:
 
-IMAGE 2-5
+![snitch2-5](snitch2-5.png)
 
 # Interlude: What'd we just do?
 As a rough description, we created a website which shows Todo items that are 
@@ -395,7 +395,7 @@ I find the best way to find out what will happen with an HTML element is to try
 it out in the browser, so refresh the page, then submit the form with a new Todo
 in the input box. After the form is submitted, another 404 error should pop up:
 
-2-6
+![snitch2-6](snitch2-6.png)
 
 But we can see that it's trying to hit a route that matches `post '/todos'`.
 
@@ -427,7 +427,7 @@ Now when we resubmit the form (from
 <a href="http://localhost:4567/todos" target="_blank">http://localhost:4567/todos</a>),
 we get a nice message!
 
-2-7
+![snitch2-7](snitch2-7.png)
 
 We've used the route `/todos` here to make our routes consistent and easy to 
 remember. Also notice that we can still hit the
