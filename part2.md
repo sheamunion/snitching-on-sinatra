@@ -1,4 +1,4 @@
-# Snitching on Sinatra, Part 2
+# Snitching on Sinatra Part 2
 
 # Recap
 In part 1, we created a simple web application with Sinatra that allowed us to
@@ -45,18 +45,19 @@ require 'active_record'
 ```
 
 At this point, all we've done is require Sinatra, but I recommend trying to 
-start your application by running `rerun todoolittle.rb` and making sure you see
-what you expect. For example, I expect to see a message that says a web server
-is accepting connections on port `4567`.
+start your application by running `rerun todoolittle.rb` to make sure you see
+what you expect. For example, I expect to see a message in my terminal that says 
+a web server is accepting connections on port `4567`.
 
+# Create the Controller 
 Create a directory inside the `todoolittle` directory called `controllers`
 
 ```bash
 mkdir controllers
 ```
 
-and create a new file called `todos.rb` in the `controllers` directory with the
-following route:
+and create a new file called `todos.rb` (in the `controllers` directory)
+with the following route:
 
 ```ruby
 get '/todos' do
@@ -146,7 +147,7 @@ alarm bells... what database?!) and render a view named `index.erb`. We don't
 have that view file, but now is not a terrible time to run our application to 
 see that the error messages we're receiving are what we expect. 
 
-IMAGE 2-1
+![snitch2-1](snitch2-1.png)
 
 This looks familiar (link to other tutorial view error), and we can fix the 
 issue by creating the missing view. Sinatra will automatically check for views
@@ -446,10 +447,16 @@ end
 ```
 
 Now when the form is submitted with a new Todo, the new Todo will show up on our
-Todo list!
+Todo list! Your new Todo item is persisted, even when loading the page or 
+restarting your application.
 
 *Note: How does Sinatra know which route to go to when a route responds with a
 redirect? It tells the browser to make another request to the route specified
 (`'/todos'` in this case), but to make it a GET request. It does this using the
 <a href="https://en.wikipedia.org/wiki/HTTP_303" target="_blank">HTTP 303</a> 
 status code.*
+
+# Wrap Up
+In this version, we created a web application that stores data in a database
+that has been submitted using a browser! We tied HTML, Sinatra, ActiveRecord,
+and SQLite together to make a web application.
