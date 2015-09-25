@@ -1,7 +1,7 @@
 # Snitching on Sinatra Part 2
 
 # Recap
-In part 1, we created a simple web application with Sinatra that allowed us to
+In [part 1](part1.md), we created a simple web application with Sinatra that allowed us to
 submit a greeting that would be displayed via HTML in the browser. On the way,
 we figured out how to make routes, the differences between different HTTP methods
 (GET and POST), and how to render HTML using views. Plus, we got to see at a few 
@@ -149,9 +149,9 @@ see that the error messages we're receiving are what we expect.
 
 ![snitch2-1](snitch2-1.png)
 
-This looks familiar (link to other tutorial view error), and we can fix the 
-issue by creating the missing view. Sinatra will automatically check for views
-in a `views` directory, which matches our current directory naming scheme:
+[This looks familiar](part1.md#views), and we can fix the issue by creating the 
+missing view. Sinatra will automatically check for views in a `views` directory, 
+which matches our current directory naming scheme:
 
 ```bash
 mkdir views
