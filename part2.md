@@ -149,9 +149,11 @@ see that the error messages we're receiving are what we expect.
 
 ![snitch2-1](snitch2-1.png)
 
-[This looks familiar](part1.md#views), and we can fix the issue by creating the 
-missing view. Sinatra will automatically check for views in a `views` directory, 
-which matches our current directory naming scheme:
+This looks very similar to the error we got in part 1 when we were creating a
+new view, and we can fix the error by creating the missing view.
+Sinatra will automatically check for views in a `views` directory,
+which matches our current directory naming scheme and keeps our project looking
+nice:
 
 ```bash
 mkdir views
