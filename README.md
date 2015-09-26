@@ -120,7 +120,11 @@ Install it with
 $ gem install rerun
 ```
 
-and you can run your Sinatra application by running `rerun` and specifying
+*Note: If you're using <a href="https://github.com/sstephenson/rbenv" target="_blank">rbenv</a>, 
+you'll need to run `rbenv rehash` to reload commands you've installed with a gem 
+(like `rerun`). If you're using rbenv, run `rbenv rehash` before continuing.*
+
+Now you can run your Sinatra application by running `rerun` and specifying
 your sinatra ruby file (`sinatra.rb`) as an argument. So instead of
 `ruby sinatra.rb`, you can run `rerun sinatra.rb` and rerun will automatically
 reload your application each time you make a change.
