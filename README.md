@@ -368,7 +368,7 @@ end
 For now, we're just going to render the same view again, `greeting.erb`.
 
 Go back to the main greeting page where the form is being displayed
-(<a href="http://localhost:4567/cities/berkeley/names/eve" target="_blank">http://localhost:4567/cities/berkeley/names/eve</a>) and submit the form again.
+(<a href="http://localhost:4567/cities/berkeley/greetings/eve" target="_blank">http://localhost:4567/cities/berkeley/greetings/eve</a>) and submit the form again.
 
 ![snitch9](snitch9.png)
 
