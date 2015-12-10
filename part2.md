@@ -16,7 +16,7 @@ uses Active Record to store todo items using a SQLite database.
 ## Prerequisites
 Part 2 of this tutorial assumes some familiarity with:
 * The basics of Sinatra. <a href="part1.md" target="_blank">Part 1 of this tutorial</a> may help.
-* The basics of Active Record <a href="http://guides.rubyonrails.org/active_record_basics.html" target="_blank">Active Record</a>,
+* The basics of <a href="http://guides.rubyonrails.org/active_record_basics.html" target="_blank">Active Record</a>,
   including:
   * Migrations
   * Classes/Models
