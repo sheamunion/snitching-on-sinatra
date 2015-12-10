@@ -66,9 +66,9 @@ start your application by running `rerun todoolittle.rb` to make sure you see
 what you expect. For example, I expect to see a message in my terminal that says 
 a web server is accepting connections on port `4567`.
 
-:flashlight: `rerun` will automatically reload the web server when we change our 
-code. We're using `todoolittle.rb` as the entry point of our application;
-`todoolittle.rb` will load gems and `require` other ruby files we write.
+> :flashlight: `rerun` will automatically reload the web server when we change our 
+> code. We're using `todoolittle.rb` as the entry point of our application;
+> `todoolittle.rb` will load gems and `require` other ruby files we write.
 
 # Create the Controller 
 Create a directory inside the `todoolittle` directory called `controllers`
@@ -86,9 +86,9 @@ get '/todos' do
 end
 ```
 
-:flashlight: **It's important to note (but it's easy to miss) that we've created
-two ruby source files, `todoolittle.rb` and `controllers/todos.rb`, but we 
-haven't connected the two files together yet.**
+> :flashlight: **It's important to note (but it's easy to miss) that we've created
+> two ruby source files, `todoolittle.rb` and `controllers/todos.rb`, but we 
+> haven't connected the two files together yet.**
 
 If you visited <a href="http://localhost:4567/todos" target="_blank">http://localhost:4567/todos</a>
 in your browser, you'd see Sinatra's 404 page. In part one, *we only had one ruby
@@ -296,13 +296,13 @@ in a `migrate` folder, so create those in your `todoolittle` folder:
 mkdir -p db/migrate
 ```
 
-:flashlight: *If you're wondering, `mkdir -p` will create intermediate directories 
-if they don't already exist. That is, if we don't already have a `db` directory, 
-it will create both `db` and `migrate`.*
-
-*For more information about the options you can send to a command line 
-application, use `man application`, where `application` is the application you 
-want to know more about. To find out more about `mkdir`, run `man mkdir`.*
+> :flashlight: *If you're wondering, `mkdir -p` will create intermediate directories 
+> if they don't already exist. That is, if we don't already have a `db` directory, 
+> it will create both `db` and `migrate`.*
+> 
+> *For more information about the options you can send to a command line 
+> application, use `man application`, where `application` is the application you 
+> want to know more about. To find out more about `mkdir`, run `man mkdir`.*
 
 Now we can create a ruby file that will act as migration to create our `todos`
 table:
@@ -311,8 +311,8 @@ table:
 touch db/migrate/01_create_todos.rb
 ```
 
-*Note: We're just going to use the number 01 in the filename to avoid confusion
-with timestamps. In most situations, timestamps work better.*
+> :flashlight: We're just going to use the number 01 in the filename to avoid confusion
+> with timestamps. In most situations, timestamps work better.*
 
 Edit that file and add the code to create a new table:
 
@@ -490,11 +490,11 @@ Now when the form is submitted with a new Todo, the new Todo will show up on our
 Todo list! Your new Todo item is persisted, even when loading the page or 
 restarting your application.
 
-:flashlight: *How does Sinatra know which route to go to when a route responds 
-with a redirect? It tells the browser to make another request to the route 
-specified (`'/todos'` in this case), but to make it a GET request. It does this 
-using the <a href="https://en.wikipedia.org/wiki/HTTP_303" target="_blank">HTTP 
-303</a> status code.*
+> :flashlight: *How does Sinatra know which route to go to when a route responds 
+> with a redirect? It tells the browser to make another request to the route 
+> specified (`'/todos'` in this case), but to make it a GET request. It does this 
+> using the <a href="https://en.wikipedia.org/wiki/HTTP_303" target="_blank">HTTP 
+> 303</a> status code.*
 
 # Wrap Up
 In this chapter, we created a web application that stores data in a database
