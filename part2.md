@@ -38,12 +38,14 @@ minimum, I'll only use a couple emoji:
 
 ### Code snippets
 Since this is a code-along tutorial, individual text you'll need to enter in the
-terminal or in a file isn't demarcated with anything other than `code block text`.
-Text included in a code block as an example to *read* (not for you to type in) 
-is indicated with the aforementioned :mag:.
+terminal or a file is demarcated as `code block text`. 
+
+However, once in a while I still want to show text that is `code block formatted`
+but that you don't have to enter yourself. Text indcluded in a code block for
+you to *read* but not to type in will be indicated with the aforementioned :mag:.
 
 **In a nutshell, code blocks indicate something to consciously type unless 
-otherwise indicated.**
+indicated with :mag:**
 
 # Starting Out
 Create a directory so all of your project files stay together. Let's call it 
