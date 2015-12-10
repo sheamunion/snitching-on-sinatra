@@ -38,9 +38,9 @@ minimum, I'll only use a couple emoji:
 
 ### Code snippets
 Since this is a code-along tutorial, individual text you'll need to enter in the
-terminal or in a file isn't demarcated. Text included in a code block as an 
-example to *read* (not for you to type in) is indicated with the aforementioned
-:mag:.
+terminal or in a file isn't demarcated with anything other than `code block text`.
+Text included in a code block as an example to *read* (not for you to type in) 
+is indicated with the aforementioned :mag:.
 
 **In a nutshell, code blocks indicate something to consciously type unless 
 otherwise indicated.**
@@ -294,9 +294,9 @@ in a `migrate` folder, so create those in your `todoolittle` folder:
 mkdir -p db/migrate
 ```
 
-*If you're wondering, `mkdir -p` will create intermediate directories if they 
-don't already exist. That is, if we don't already have a `db` directory, it will
-create both `db` and `migrate`.*
+:flashlight: *If you're wondering, `mkdir -p` will create intermediate directories 
+if they don't already exist. That is, if we don't already have a `db` directory, 
+it will create both `db` and `migrate`.*
 
 *For more information about the options you can send to a command line 
 application, use `man application`, where `application` is the application you 
@@ -331,10 +331,12 @@ We need to tell ActiveRecord to run this migration and create the table.
 This tutorial provides a `Rakefile` for you to use. It should be in the same
 directory as this document and it contains a few useful [rake](https://github.com/ruby/rake) 
 tasks. I recommend [reading through](Rakefile) the `Rakefile` to familiarize yourself with 
-what has been defined and what each task might do. 
+what has been defined and what each task will do. 
 
 Copy the `Rakefile` into your `todoolittle` directory and run `rake -T` to list
-the tasks you can use. You should see this:
+the tasks you can use. 
+
+:mag: You should see this:
 
 ```bash
 rake db:create   # Create the database todolittle
@@ -355,7 +357,7 @@ and then run the migration we created a little bit ago with
 rake db:migrate
 ```
 
-You should see output similar to this:
+:mag: You should see output similar to this:
 
 ```bash
 == 1 CreateTodos: migrating ===================================================
@@ -486,13 +488,13 @@ Now when the form is submitted with a new Todo, the new Todo will show up on our
 Todo list! Your new Todo item is persisted, even when loading the page or 
 restarting your application.
 
-*Note: How does Sinatra know which route to go to when a route responds with a
-redirect? It tells the browser to make another request to the route specified
-(`'/todos'` in this case), but to make it a GET request. It does this using the
-<a href="https://en.wikipedia.org/wiki/HTTP_303" target="_blank">HTTP 303</a> 
-status code.*
+:flashlight: *How does Sinatra know which route to go to when a route responds 
+with a redirect? It tells the browser to make another request to the route 
+specified (`'/todos'` in this case), but to make it a GET request. It does this 
+using the <a href="https://en.wikipedia.org/wiki/HTTP_303" target="_blank">HTTP 
+303</a> status code.*
 
 # Wrap Up
-In this version, we created a web application that stores data in a database
+In this chapter, we created a web application that stores data in a database
 that has been submitted using a browser! We tied HTML, Sinatra, ActiveRecord,
 and SQLite together to make a web application.
