@@ -28,6 +28,23 @@ Ensure that the required gems have been installed by running
 gem install sqlite3 rerun sinatra activerecord
 ```
 
+## Emoji Key
+A quick note about emoji use in this part of the tutorial. To keep noise to a 
+minimum, I'll only use a couple emoji:
+
+* :mag: to indicate something you should read/notice. I'll use this one when you
+  should notice something in your terminal.
+* :flashlight: to say "hey, this is an insight you may have missed!"
+
+### Code snippets
+Since this is a code-along tutorial, individual text you'll need to enter in the
+terminal or in a file isn't demarcated. Text included in a code block as an 
+example to *read* (not for you to type in) is indicated with the aforementioned
+:mag:.
+
+**In a nutshell, code blocks indicate something to consciously type unless 
+otherwise indicated.**
+
 # Starting Out
 Create a directory so all of your project files stay together. Let's call it 
 `todoolittle`, just so we can refer to a consistent directory name.
