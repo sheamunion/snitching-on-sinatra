@@ -49,6 +49,10 @@ start your application by running `rerun todoolittle.rb` to make sure you see
 what you expect. For example, I expect to see a message in my terminal that says 
 a web server is accepting connections on port `4567`.
 
+:flashlight: `rerun` will automatically reload the web server when we change our 
+code. We're using `todoolittle.rb` as the entry point of our application;
+`todoolittle.rb` will load gems and `require` other ruby files we write.
+
 # Create the Controller 
 Create a directory inside the `todoolittle` directory called `controllers`
 
@@ -65,11 +69,16 @@ get '/todos' do
 end
 ```
 
+:flashlight: **It's important to note (but it's easy to miss) that we've created
+two ruby source files, `todoolittle.rb` and `controllers/todos.rb`, but we 
+haven't connected the two files together yet.**
+
 If you visited <a href="http://localhost:4567/todos" target="_blank">http://localhost:4567/todos</a>
-in your browser, you'd see Sinatra's 404 page. In part one, we only had one ruby
-source file, so when we ran it, it automatically loaded the routes defined in
-that source file. We put our routes in a different file, though, so we'll have 
-to load those routes.
+in your browser, you'd see Sinatra's 404 page. In part one, *we only had one ruby
+source file*. When we ran it, it automatically loaded the routes defined in
+that source file. With our todoolittle app, though, we're declaring routes in
+a *different file* than the file we're using to run the application. That means
+we'll have to `require` our routes file!
 
 Since Sinatra is a ruby DSL, we can use ruby syntax to load Sinatra routes. Use
 `require` in your `todoolittle.rb` file to load the file that defines our routes.
