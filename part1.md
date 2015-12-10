@@ -4,6 +4,23 @@
 Domain-Specific language (or DSL; a "language" that is used for a specific
 purpose) for creating web applications quickly.
 
+## Emoji Key
+A quick note about emoji use in this part of the tutorial. To keep noise to a 
+minimum, I'll only use a couple emoji:
+
+* :mag: to indicate something you should read/notice. I'll use this one when you
+  should notice something in your terminal.
+* :flashlight: to say "hey, this is an insight you may have missed!"
+
+### Code snippets
+Since this is a code-along tutorial, individual text you'll need to enter in the
+terminal or in a file isn't demarcated with anything other than `code block text`.
+Text included in a code block as an example to *read* (not for you to type in) 
+is indicated with the aforementioned :mag:.
+
+**In a nutshell, code blocks indicate something to consciously type unless 
+otherwise indicated.**
+
 # The Beginning
 If you haven't already, install the sinatra gem:
 
@@ -11,11 +28,11 @@ If you haven't already, install the sinatra gem:
 $ gem install sinatra -v '~> 1.4.6'
 ```
 
-*Note: What's with that `~>` syntax? We're telling `gem` to install sinatra 
-version greater than or equal to `1.4.6`, but limiting which versions it will 
-install to patch releases greater than `1.4.6`. So `1.4.7` might be installed 
-in the future, but `1.4.5` won't be. Why `1.4.6`? Sinatra 1.4.5 had a bug that 
-prevented sinatra from displaying errors to the browser.*
+> :flashlight: *What's with that `~>` syntax? We're telling `gem` to install sinatra 
+> version greater than or equal to `1.4.6`, but limiting which versions it will 
+> install to patch releases greater than `1.4.6`. So `1.4.7` might be installed 
+> in the future, but `1.4.5` won't be. Why `1.4.6`? Sinatra 1.4.5 had a bug that 
+> prevented sinatra from displaying errors to the browser.*
 
 Create a new ruby file (let's call it `sinatra.rb`, but it could really be
 called anything):
@@ -37,7 +54,9 @@ defines functionality that a developer might want to use.
 # Watching It Fail
 Before we code more, let's check out what happens when we just load Sinatra in
 our file.  Run your Sinatra application by typing `ruby sinatra.rb` in your
-terminal.  Your terminal will respond with something like
+terminal. 
+
+:mag: Your terminal will respond with something like
 
 ```
 == Sinatra (v1.4.6) has taken the stage on 4567 for development with backup from Thin
@@ -120,16 +139,18 @@ Install it with
 $ gem install rerun
 ```
 
-*Note: If you're using <a href="https://github.com/sstephenson/rbenv" target="_blank">rbenv</a>, 
-you'll need to run `rbenv rehash` to reload commands you've installed with a gem 
-(like `rerun`). If you're using rbenv, run `rbenv rehash` before continuing.*
+> :flashlight: *If you're using <a href="https://github.com/sstephenson/rbenv" target="_blank">rbenv</a>, 
+> you'll need to run `rbenv rehash` to reload commands you've installed with a gem 
+> (like `rerun`). If you're using rbenv, run `rbenv rehash` before continuing.*
 
 Now you can run your Sinatra application by running `rerun` and specifying
 your sinatra ruby file (`sinatra.rb`) as an argument. So instead of
 `ruby sinatra.rb`, you can run `rerun sinatra.rb` and rerun will automatically
 reload your application each time you make a change.
 
-Let's start rerun now. The output looks pretty similar with a few additions:
+Let's start rerun now. 
+
+:mag: The output looks pretty similar with a few additions:
 
 ```
 11:32:59 [rerun] Snitching-on-sinatra launched
@@ -140,9 +161,9 @@ Listening on localhost:4567, CTRL+C to stop
 11:33:01 [rerun] Watching . for **/*.{rb,js,coffee,css,scss,sass,erb,html,haml,ru,yml,slim,md} using Darwin adapter
 ```
 
-*Note: Rerun takes less than a second to reload the server, but if you change a
-file and immediately refresh the page, you may need to reload your browser again
-to see your changes reflected.*
+> :flashlight: *Rerun takes less than a second to reload the server, but if you 
+> change a file and immediately refresh the page, you may need to reload your 
+> browser again to see your changes reflected.*
 
 # URL Parameters
 As developers, we frequently need to receive information from the user of our
@@ -235,7 +256,8 @@ then load it in the browser by visiting <a href="http://localhost:4567/cities/be
 ![snitch3](snitch1-3.png)
 
 Sinatra has thrown an exception. That's good! That's something we can use.
-Let's read the error message line by line, starting at the top next to the
+
+:mag: Let's read the error message line by line, starting at the top next to the
 spilled tumbler. `Errno::ENOENT at /cities/berkeley/greetings/eve` looks
 intimidating, but the next line actually tells us exactly what we need to know:
 
