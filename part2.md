@@ -177,7 +177,9 @@ see that the error messages we're receiving are what we expect.
 ![snitch2-1](snitch2-1.png)
 
 This looks very similar to the error we got in part 1 when we were creating a
-new view, and we can fix the error by creating the missing view.
+new view (feel free to <a href="part1.md#views" target="_blank">revisit part 1</a>
+to compare error messages)
+, and we can fix the error by creating the missing view.
 Sinatra will automatically check for views in a `views` directory,
 which matches our current directory naming scheme and keeps our project looking
 nice:
@@ -208,8 +210,8 @@ an error should show up:
 
 This goes back to what we alluded to before. We don't even *have* a database. 
 We haven't told ActiveRecord how to connect to a database. We haven't created
-any tables in the database that doesn't exist. All of those things are true, 
-and this error message is telling us as much. 
+any tables in the database that doesn't exist. This error message is telling us
+that all of these things are true.
 
 ## Configuring Active Record
 We'll need to set up an Active Record connection. To do so, change your 
