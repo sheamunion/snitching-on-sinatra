@@ -60,7 +60,7 @@ a ruby file and used `require` to load the Sinatra library. When we ran
 Open your browser and go to <a href="http://localhost:4567" target="_blank">http://localhost:4567</a>.
 What happened?
 
-![snitch1](snitch1.png)
+![snitch1](snitch1-1.png)
 
 While you're developing an application, if Sinatra can't find a route it will
 respond with a helpful error message. You'll become very familiar with **Sinatra
@@ -84,7 +84,7 @@ Now when we start the server again (with `ruby sinatra.rb`) and visit
 <a href="http://localhost:4567" target="_blank">http://localhost:4567</a>
 in the browser, "Hello world!" should show up in the browser!
 
-![snitch2](snitch2.png)
+![snitch2](snitch1-2.png)
 
 We've created a "route" &mdash; the "root" route, which we can declare with a
 slash (`/`) &mdash; so when we visit that route in the browser, the browser uses
@@ -232,7 +232,7 @@ end
 
 then load it in the browser by visiting <a href="http://localhost:4567/cities/berkeley/greetings/eve" target="_blank">http://localhost:4567/cities/berkeley/greetings/eve</a>
 
-![snitch3](snitch3.png)
+![snitch3](snitch1-3.png)
 
 Sinatra has thrown an exception. That's good! That's something we can use.
 Let's read the error message line by line, starting at the top next to the
@@ -272,7 +272,7 @@ $ touch views/greeting.erb
 
 Then you can reload your browser
 
-![snitch4](snitch4.png)
+![snitch4](snitch1-4.png)
 
 Yay! It didn't fail! But there's nothing showing up. ERB &mdash; Embedded Ruby &mdash; is
 a way to create templates with executable code. It allows you to use string
@@ -286,7 +286,7 @@ browser, let's put some HTML in our view:
 
 Refresh the browser, and you should see a nice greeting!
 
-![snitch5](snitch5.png)
+![snitch5](snitch1-5.png)
 
 Sinatra's `erb` method *returns a string*, which means we can run it at the end
 of a route block and expect the method's output to render to the browser.
@@ -312,7 +312,7 @@ Edit the view file to look like this
 
 and refresh the page.
 
-![snitch6](snitch6.png)
+![snitch6](snitch1-6.png)
 
 The `<%= @name %>` was replaced with the contents of the instance variable
 `@name`, which we set in the controller.
@@ -336,12 +336,12 @@ Edit the `views/greeting.erb` view file again and add an HTML form:
 
 When you refresh, you should see an input with a submit button.
 
-![snitch7](snitch7.png)
+![snitch7](snitch1-7.png)
 
 Enter some text in the text input and click the Submit button. I'm going to enter
 the text "GOOD MORNING."
 
-![snitch8](snitch8.png)
+![snitch8](snitch1-8.png)
 
 The structure of this error looks really familiar. We saw this when we first
 started and we hadn't yet declared the route we were trying to access. Sinatra is
@@ -370,7 +370,7 @@ For now, we're just going to render the same view again, `greeting.erb`.
 Go back to the main greeting page where the form is being displayed
 (<a href="http://localhost:4567/cities/berkeley/greetings/eve" target="_blank">http://localhost:4567/cities/berkeley/greetings/eve</a>) and submit the form again.
 
-![snitch9](snitch9.png)
+![snitch9](snitch1-9.png)
 
 It kind of looks like nothing happened. But if you watch closely after submitting
 the form, the page actually loads again. What's happening is that the browser
@@ -401,7 +401,7 @@ experiment with using `<%` and `<%=`.
 
 Now when we submit the form, we get a nice custom greeting:
 
-![snitch10](snitch10.png)
+![snitch10](snitch1-10.png)
 
 # Congratulations!
 
