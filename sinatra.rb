@@ -1,4 +1,5 @@
 require 'sinatra'
+#these are the routes for server
 
 get '/' do
   "Hello World!!!"
